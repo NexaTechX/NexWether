@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App by Shinaayomi</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+    
+</head>
+<body>
+    <div class="container">
+        <h1 class="author_name">NexatechX</h1>
+        <div class="wrapper">
+            <!-- Weather Image and Info Section -->
+            <div class="img_section">
+                <div class="default_info">
+                    <h2 class="default_day">Tuesday</h2>
+                    <span class="default_date">22 October 2024</span>
+                    <div class="icons">
+                        <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="Weather Icon">
+                        <h2 class="weather_temp">22°C</h2>
+                        <h3 class="cloudtxt">Overcast Clouds</h3>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Content Section -->
+            <div class="content_section">
+                <form>
+                    <input type="text" placeholder="Search Location" class="input_field">
+                    <button type="submit" class="btn_section">Search</button>
+                </form>
+
+                <div class="day_info">
+                    <div class="content">
+                        <p class="title">NAME</p>
+                        <span class="value">Nigeria</span>
+                    </div>
+                    <div class="content">
+                        <p class="title">TEMP</p>
+                        <span class="value">23°C</span>
+                    </div>
+                    <div class="content">
+                        <p class="title">HUMIDITY</p>
+                        <span class="value">45%</span>
+                    </div>
+                    <div class="content">
+                        <p class="title">WIND SPEED</p>
+                        <span class="value">2.4 Km/h</span>
+                    </div>
+                </div>
+
+                <!-- Forecast Section -->
+                <div class="list_content">
+                    <ul>
+                        <li>
+                            <img src="https://openweathermap.org/img/wn/10d@2x.png">
+                            <span>Sat</span>
+                            <span class="day_temp">23°C</span>
+                        </li>
+                        <li>
+                            <img src="https://openweathermap.org/img/wn/10d@2x.png">
+                            <span>Sat</span>
+                            <span class="day_temp">23°C</span>
+                        </li>
+                        <li>
+                            <img src="https://openweathermap.org/img/wn/10d@2x.png">
+                            <span>Sat</span>
+                            <span class="day_temp">23°C</span>
+                        </li>
+                        <li>
+                            <img src="https://openweathermap.org/img/wn/10d@2x.png">
+                            <span>Sat</span>
+                            <span class="day_temp">23°C</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>

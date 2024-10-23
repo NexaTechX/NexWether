@@ -1,0 +1,206 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Ruda:wght@400;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #37474f;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 800px;
+  background-color: #232931;
+  color: #fff;
+  border-radius: 25px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 3fr 4fr;
+  gap: 1rem;
+}
+
+.img_section {
+  border-radius: 25px;
+  background-image: url("../img/sky 3.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  transform: scale(1.03) perspective(200px);
+}
+
+.img_section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  background: linear-gradient(135deg, #5c6bc0 10%, #0d4741 100%);
+  z-index: -1;
+  opacity: 0.5;
+  border-radius: 25px;
+}
+
+.default_info {
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.default_info img {
+  width: 80%;
+  object-fit: cover;
+  margin: 0 auto;
+}
+
+.default_info h2 {
+  font-size: 3rem;
+}
+
+.default_info h3 {
+  font-size: 1.3rem;
+  text-transform: capitalize;
+}
+
+.weather_temp {
+  font-size: 4rem;
+  font-weight: 800;
+}
+
+/* Content Section */
+.content_section {
+  padding: 1.5rem;
+}
+
+.content_section form {
+  position: relative; /* Make this relative for button positioning */
+  margin: 1.5rem 0;
+}
+
+.content_section form input {
+  width: 100%; /* Full width of the form */
+  outline: none;
+  background: transparent;
+  border: 1px solid #37474f;
+  border-radius: 5px;
+  padding: 0.7rem 1rem;
+  font-family: inherit;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.content_section form button {
+  position: absolute;
+  top: 50%; /* Center vertically */
+  right: 0;
+  transform: translateY(-50%); /* Align vertically */
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  padding: 0.7rem 1rem;
+  font-family: inherit;
+  font-size: 1rem;
+  outline: none;
+  border: none;
+  background: #5c6bc0;
+  color: white;
+  cursor: pointer;
+}
+
+/* Adjust button on small screens */
+@media (max-width: 600px) {
+  .content_section form input {
+    width: calc(100% - 3rem); /* Give space for the button */
+  }
+}
+
+
+.day_info .content{
+  display: flex;
+  justify-content: space-between;
+  padding: 0.4rem 0;
+}
+
+.day_info .content .title{
+  font-weight: 600;
+}
+
+.list_content ul{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  margin: 3rem 0rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+}
+
+.list_content ul li{
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 1rem;
+  transition: all 0.3s ease-in;
+}
+
+.list_content ul li:hover{
+  transform: scale(1.1);
+  background-color: #fff;
+  color: #232931;
+  box-shadow: 0 5px 15px ;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+  cursor: pointer;
+}
+
+.list_content ul li img{
+  width: 50%;
+  object-fit: cover;
+}
+
+
+
+
+/* Author Name Styling */
+.author_name {
+  text-align: center;
+  font-size: 2.5rem; /* Adjust the size as needed */
+  color: #ffcc00; /* Change the color to whatever you like */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Optional shadow effect */
+  margin-bottom: 1rem; /* Spacing below the name */
+}
+
+/* Enhancing the input field */
+.content_section form input {
+  transition: background-color 0.3s ease; /* Smooth transition for background */
+}
+
+.content_section form input:focus {
+  background-color: #5c6bc0; /* Change background on focus */
+}
+
+/* Button Hover Effect */
+.content_section form button:hover {
+  background: #3f51b5; /* Darker shade on hover */
+}
+
+/* Enhanced Forecast Items */
+.list_content ul li {
+  transition: transform 0.3s ease, background-color 0.3s ease; /* Added transition for background color */
+}
+
+.list_content ul li:hover {
+  transform: scale(1.1);
+  background-color: #ffcc00; /* Change background color on hover */
+  color: #232931;
+}
